@@ -67,7 +67,7 @@ module SeedFu
     def <<(seed)
       raise "You must add seeds inside a SeedFu::Writer#write block" unless @io
 
-      buffer = ''
+      buffer = String.new('')
 
       if chunk_this_seed?
         buffer << seed_footer
